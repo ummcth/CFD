@@ -60,8 +60,8 @@ DO J=1,NT
 	DO I=1, NX
             UN(I)=U(I)-CFL*(U(I)-U(I-1)) 
 	END DO
-	UN(1)=UN(NX-1)
-	UN(NX)=U(2)
+	UN(0)=UN(NX-1)
+	UN(NX+1)=U(2)
 	U=UN
 END DO
               
